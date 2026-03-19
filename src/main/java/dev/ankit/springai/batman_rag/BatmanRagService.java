@@ -65,9 +65,8 @@ public class BatmanRagService {
         StringBuilder context = new StringBuilder();
         context.append("Based on the Batman knowledge base:\n\n");
         if (similarDocuments != null) {
-            similarDocuments.stream().filter(Objects::nonNull).forEach((Document doc) -> {
-                context.append(doc.getFormattedContent()).append("\n\n");
-            });
+
+            context.append(similarDocuments.get(0).getFormattedContent()).append("\n\n");
         }
 
         // Create prompt with context

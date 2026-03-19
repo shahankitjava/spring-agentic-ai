@@ -21,12 +21,7 @@
     <developers>
         <developer/>
     </developers>
-    <scm>
-        <connection/>
-        <developerConnection/>
-        <tag/>
-        <url/>
-    </scm>
+
     <properties>
         <java.version>24</java.version>
 		<spring-ai.version>1.0.0-M6</spring-ai.version>

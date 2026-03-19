@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-agentic-ai-demo
+  labels:
+    app: spring-agentic-ai-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spring-agentic-ai-demo
+  template:
+    metadata:
+      name: spring-agentic-ai-demo
+      labels:
+        app: spring-agentic-ai-demo
+    spec:
+      containers:
+        - name: spring-agentic-ai-demo
+          image: shahankitturn/spring-agentic-ai-demo:v1
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+      restartPolicy: Always
+      
